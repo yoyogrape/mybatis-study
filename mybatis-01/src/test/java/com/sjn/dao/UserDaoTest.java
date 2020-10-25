@@ -18,4 +18,16 @@ public class UserDaoTest {
             }
         }
     }
+
+    /**
+     * 增删改选哟提交事务
+     */
+    @Test
+    public void add() {
+        try (SqlSession sqlSession = MybatisUtil.getSqlSession()) {
+            UserDao dao = sqlSession.getMapper(UserDao.class);
+            dao.addUser(new User("zhansan","1234"));
+            sqlSession.commit();
+        }
+    }
 }

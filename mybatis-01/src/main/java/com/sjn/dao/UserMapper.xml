@@ -6,6 +6,11 @@
     <select id="findAll" resultType="com.sjn.opjo.User">
         select * from user;
     </select>
+
+    <select id="findByName" resultType="com.sjn.opjo.User">
+        select * from user where name like concat('%',#{name},'%');
+    </select>
+
     <insert id="addUser" parameterType="com.sjn.opjo.User">
         INSERT INTO user (name,pwd) VALUE (#{name},#{pwd});
     </insert>

@@ -19,8 +19,20 @@ public class UserDaoTest {
         }
     }
 
+    @Test
+    public void findByName() {
+        try (SqlSession sqlSession = MybatisUtil.getSqlSession()) {
+            UserDao dao = sqlSession.getMapper(UserDao.class);
+//            List<User> zh = dao.findByName("%zh%");
+            List<User> zh = dao.findByName("zh");
+            for (User user : zh) {
+                System.out.println(user);
+            }
+        }
+    }
+
     /**
-     * 增删改选哟提交事务
+     * 增删改需要提交事务
      */
     @Test
     public void add() {

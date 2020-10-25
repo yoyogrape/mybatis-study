@@ -21,6 +21,12 @@
         </environment>
     </environments>
     <mappers>
-        <mapper resource="com/sjn/dao/UserMapper.xml"/>
+        <!--<mapper resource="com/sjn/dao/UserMapper.xml"/>-->
+        <!--<mapper class="com.sjn.dao.UserMapper.xml"/>-->
+        <package name="com.sjn.dao"/>
+        <!--注意：
+            1）使用类加载和包扫描接口必须和Mapper配置文件同名
+            2）使用类加载和包扫描接口必须和Mapper配置文件同包
+        -->
     </mappers>
 </configuration>

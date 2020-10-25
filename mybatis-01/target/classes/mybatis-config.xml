@@ -15,7 +15,7 @@
             </dataSource>
         </environment>
     </environments>
-    <!--<mappers>-->
-        <!--<mapper resource="com/sjn/dao/UserMapper.xml"/>-->
-    <!--</mappers>-->
+    <mappers>
+        <mapper resource="com/sjn/dao/UserMapper.xml"/>
+    </mappers>
 </configuration>

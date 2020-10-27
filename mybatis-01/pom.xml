@@ -47,6 +47,4 @@
             </plugin>
         </plugins>
     </build>
-    <artifactId>mybatis-01</artifactId>
-
 </project>
